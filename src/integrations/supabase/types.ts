@@ -14,7 +14,407 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      appointments: {
+        Row: {
+          appointment_date: string
+          created_at: string
+          doctor_id: string
+          duration_minutes: number | null
+          id: string
+          notes: string | null
+          patient_id: string
+          status: Database["public"]["Enums"]["appointment_status"] | null
+          total_cost: number | null
+          treatment_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          appointment_date: string
+          created_at?: string
+          doctor_id: string
+          duration_minutes?: number | null
+          id?: string
+          notes?: string | null
+          patient_id: string
+          status?: Database["public"]["Enums"]["appointment_status"] | null
+          total_cost?: number | null
+          treatment_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          appointment_date?: string
+          created_at?: string
+          doctor_id?: string
+          duration_minutes?: number | null
+          id?: string
+          notes?: string | null
+          patient_id?: string
+          status?: Database["public"]["Enums"]["appointment_status"] | null
+          total_cost?: number | null
+          treatment_id?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "appointments_doctor_id_fkey"
+            columns: ["doctor_id"]
+            isOneToOne: false
+            referencedRelation: "doctors"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "appointments_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "appointments_treatment_id_fkey"
+            columns: ["treatment_id"]
+            isOneToOne: false
+            referencedRelation: "treatments"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      communications: {
+        Row: {
+          created_at: string
+          files: Json | null
+          id: string
+          is_read: boolean | null
+          message: string | null
+          message_type: Database["public"]["Enums"]["communication_type"] | null
+          recipient_id: string
+          related_order_id: string | null
+          sender_id: string
+        }
+        Insert: {
+          created_at?: string
+          files?: Json | null
+          id?: string
+          is_read?: boolean | null
+          message?: string | null
+          message_type?:
+            | Database["public"]["Enums"]["communication_type"]
+            | null
+          recipient_id: string
+          related_order_id?: string | null
+          sender_id: string
+        }
+        Update: {
+          created_at?: string
+          files?: Json | null
+          id?: string
+          is_read?: boolean | null
+          message?: string | null
+          message_type?:
+            | Database["public"]["Enums"]["communication_type"]
+            | null
+          recipient_id?: string
+          related_order_id?: string | null
+          sender_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "communications_recipient_id_fkey"
+            columns: ["recipient_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "communications_related_order_id_fkey"
+            columns: ["related_order_id"]
+            isOneToOne: false
+            referencedRelation: "lab_orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "communications_sender_id_fkey"
+            columns: ["sender_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      doctors: {
+        Row: {
+          availability: Json | null
+          certifications: string[] | null
+          consultation_fee: number | null
+          created_at: string
+          education: string | null
+          experience_years: number | null
+          id: string
+          is_active: boolean | null
+          profile_id: string
+          rating: number | null
+          specialization: string
+          total_reviews: number | null
+          updated_at: string
+        }
+        Insert: {
+          availability?: Json | null
+          certifications?: string[] | null
+          consultation_fee?: number | null
+          created_at?: string
+          education?: string | null
+          experience_years?: number | null
+          id?: string
+          is_active?: boolean | null
+          profile_id: string
+          rating?: number | null
+          specialization: string
+          total_reviews?: number | null
+          updated_at?: string
+        }
+        Update: {
+          availability?: Json | null
+          certifications?: string[] | null
+          consultation_fee?: number | null
+          created_at?: string
+          education?: string | null
+          experience_years?: number | null
+          id?: string
+          is_active?: boolean | null
+          profile_id?: string
+          rating?: number | null
+          specialization?: string
+          total_reviews?: number | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "doctors_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      lab_orders: {
+        Row: {
+          appointment_id: string | null
+          created_at: string
+          doctor_id: string
+          due_date: string | null
+          files: Json | null
+          id: string
+          order_details: string
+          patient_id: string
+          prosthetist_id: string | null
+          specifications: Json | null
+          status: Database["public"]["Enums"]["treatment_status"] | null
+          updated_at: string
+        }
+        Insert: {
+          appointment_id?: string | null
+          created_at?: string
+          doctor_id: string
+          due_date?: string | null
+          files?: Json | null
+          id?: string
+          order_details: string
+          patient_id: string
+          prosthetist_id?: string | null
+          specifications?: Json | null
+          status?: Database["public"]["Enums"]["treatment_status"] | null
+          updated_at?: string
+        }
+        Update: {
+          appointment_id?: string | null
+          created_at?: string
+          doctor_id?: string
+          due_date?: string | null
+          files?: Json | null
+          id?: string
+          order_details?: string
+          patient_id?: string
+          prosthetist_id?: string | null
+          specifications?: Json | null
+          status?: Database["public"]["Enums"]["treatment_status"] | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lab_orders_appointment_id_fkey"
+            columns: ["appointment_id"]
+            isOneToOne: false
+            referencedRelation: "appointments"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lab_orders_doctor_id_fkey"
+            columns: ["doctor_id"]
+            isOneToOne: false
+            referencedRelation: "doctors"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lab_orders_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lab_orders_prosthetist_id_fkey"
+            columns: ["prosthetist_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      profiles: {
+        Row: {
+          address: string | null
+          avatar_url: string | null
+          bio: string | null
+          clinic_name: string | null
+          created_at: string
+          date_of_birth: string | null
+          email: string
+          first_name: string
+          id: string
+          lab_name: string | null
+          last_name: string
+          license_number: string | null
+          phone: string | null
+          role: Database["public"]["Enums"]["user_role"]
+          specialization: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          address?: string | null
+          avatar_url?: string | null
+          bio?: string | null
+          clinic_name?: string | null
+          created_at?: string
+          date_of_birth?: string | null
+          email: string
+          first_name: string
+          id?: string
+          lab_name?: string | null
+          last_name: string
+          license_number?: string | null
+          phone?: string | null
+          role?: Database["public"]["Enums"]["user_role"]
+          specialization?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          address?: string | null
+          avatar_url?: string | null
+          bio?: string | null
+          clinic_name?: string | null
+          created_at?: string
+          date_of_birth?: string | null
+          email?: string
+          first_name?: string
+          id?: string
+          lab_name?: string | null
+          last_name?: string
+          license_number?: string | null
+          phone?: string | null
+          role?: Database["public"]["Enums"]["user_role"]
+          specialization?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      reviews: {
+        Row: {
+          appointment_id: string | null
+          comment: string | null
+          created_at: string
+          doctor_id: string
+          id: string
+          patient_id: string
+          rating: number | null
+        }
+        Insert: {
+          appointment_id?: string | null
+          comment?: string | null
+          created_at?: string
+          doctor_id: string
+          id?: string
+          patient_id: string
+          rating?: number | null
+        }
+        Update: {
+          appointment_id?: string | null
+          comment?: string | null
+          created_at?: string
+          doctor_id?: string
+          id?: string
+          patient_id?: string
+          rating?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reviews_appointment_id_fkey"
+            columns: ["appointment_id"]
+            isOneToOne: false
+            referencedRelation: "appointments"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reviews_doctor_id_fkey"
+            columns: ["doctor_id"]
+            isOneToOne: false
+            referencedRelation: "doctors"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reviews_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      treatments: {
+        Row: {
+          category: string | null
+          created_at: string
+          description: string | null
+          duration_minutes: number | null
+          id: string
+          name: string
+          price: number | null
+          requires_lab: boolean | null
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          duration_minutes?: number | null
+          id?: string
+          name: string
+          price?: number | null
+          requires_lab?: boolean | null
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          description?: string | null
+          duration_minutes?: number | null
+          id?: string
+          name?: string
+          price?: number | null
+          requires_lab?: boolean | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +423,10 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      appointment_status: "pending" | "confirmed" | "completed" | "cancelled"
+      communication_type: "message" | "file" | "prescription" | "lab_order"
+      treatment_status: "planned" | "in_progress" | "completed" | "cancelled"
+      user_role: "patient" | "doctor" | "prosthetist" | "admin"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +553,11 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      appointment_status: ["pending", "confirmed", "completed", "cancelled"],
+      communication_type: ["message", "file", "prescription", "lab_order"],
+      treatment_status: ["planned", "in_progress", "completed", "cancelled"],
+      user_role: ["patient", "doctor", "prosthetist", "admin"],
+    },
   },
 } as const
