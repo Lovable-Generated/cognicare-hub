@@ -4,7 +4,7 @@ import FeaturesGrid from "@/components/dental/FeaturesGrid";
 import CTASection from "@/components/dental/CTASection";
 import DentalFooter from "@/components/dental/DentalFooter";
 
-const Index = () => {
+const DentalQuick = () => {
   return (
     <div className="min-h-screen bg-background">
       <DentalHeader />
@@ -18,4 +18,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default DentalQuick;
