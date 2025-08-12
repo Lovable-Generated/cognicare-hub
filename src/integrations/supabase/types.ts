@@ -420,7 +420,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      can_access_lab_order: {
+        Args: { order_id: string }
+        Returns: boolean
+      }
+      get_current_user_profile_id: {
+        Args: Record<PropertyKey, never>
+        Returns: string
+      }
     }
     Enums: {
       appointment_status: "pending" | "confirmed" | "completed" | "cancelled"
