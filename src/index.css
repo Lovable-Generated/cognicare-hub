@@ -18,10 +18,10 @@ All colors MUST be HSL.
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    /* Premium Gold - main accent */
-    --primary: 45 100% 60%;
-    --primary-foreground: 0 0% 8%;
-    --primary-hover: 45 100% 55%;
+    /* Muted Black-Gold - main accent */
+    --primary: 45 70% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 45 75% 40%;
 
     /* Darker secondary for contrast */
     --secondary: 0 0% 16%;
@@ -31,9 +31,9 @@ All colors MUST be HSL.
     --muted: 0 0% 16%;
     --muted-foreground: 0 0% 65%;
 
-    /* Gold accent variations */
-    --accent: 45 85% 65%;
-    --accent-foreground: 0 0% 8%;
+    /* Muted gold accent variations */
+    --accent: 45 60% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
@@ -45,15 +45,15 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Dental gradients - Black to Gold */
-    --gradient-primary: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 85% 65%));
+    /* Dental gradients - Black to Muted Gold */
+    --gradient-primary: linear-gradient(135deg, hsl(45 70% 45%), hsl(45 60% 50%));
     --gradient-secondary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 16%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%) 0%, hsl(45 85% 70%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(45 100% 60%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 70% 45%) 0%, hsl(45 60% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(45 70% 45%) 100%);
 
-    /* Premium shadows with gold glow */
-    --shadow-primary: 0 10px 40px -10px hsl(45 100% 60% / 0.4);
-    --shadow-gold: 0 0 30px hsl(45 100% 60% / 0.3);
+    /* Premium shadows with muted gold glow */
+    --shadow-primary: 0 10px 40px -10px hsl(45 70% 45% / 0.4);
+    --shadow-gold: 0 0 30px hsl(45 70% 45% / 0.3);
     --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.6);
 
     --sidebar-background: 0 0% 8%;
@@ -74,14 +74,14 @@ All colors MUST be HSL.
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
-    --primary: 45 100% 60%;
-    --primary-foreground: 0 0% 8%;
+    --primary: 45 70% 45%;
+    --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 16%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 16%;
     --muted-foreground: 0 0% 65%;
-    --accent: 45 85% 65%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 45 60% 50%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
     --border: 45 30% 25%;
