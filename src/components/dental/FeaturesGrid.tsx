@@ -1,5 +1,8 @@
 import { Calendar, Users, MessageSquare, Shield, Clock, Award } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import dentalTeam from "@/assets/dental-team.jpg";
+import dentalLabTechnology from "@/assets/dental-lab-technology.jpg";
+import digitalBooking from "@/assets/digital-booking.jpg";
 
 const FeaturesGrid = () => {
   const features = [
@@ -80,6 +83,54 @@ const FeaturesGrid = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* Image Showcase Section */}
+        <div className="mt-20 grid md:grid-cols-3 gap-8">
+          <div className="relative group">
+            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-gold transition-all duration-300">
+              <img 
+                src={dentalTeam} 
+                alt="Professional dental team"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-lg font-semibold text-foreground mb-1">Expert Team</h3>
+                <p className="text-muted-foreground text-sm">Licensed dental professionals</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative group">
+            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-gold transition-all duration-300">
+              <img 
+                src={dentalLabTechnology} 
+                alt="Advanced dental laboratory technology"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-lg font-semibold text-foreground mb-1">Advanced Technology</h3>
+                <p className="text-muted-foreground text-sm">State-of-the-art dental equipment</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative group">
+            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-gold transition-all duration-300">
+              <img 
+                src={digitalBooking} 
+                alt="Digital appointment booking system"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-lg font-semibold text-foreground mb-1">Digital Platform</h3>
+                <p className="text-muted-foreground text-sm">Easy online booking system</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Stats Section */}
