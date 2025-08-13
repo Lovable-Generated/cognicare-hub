@@ -105,12 +105,14 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-gold': 'var(--gradient-gold)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
 			},
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
 				'gold': 'var(--shadow-gold)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'elegant': 'var(--shadow-elegant)'
 			}
 		}
 	},

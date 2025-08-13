@@ -9,17 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-hover transition-all duration-300",
+        default: "bg-primary text-primary-foreground hover:bg-primary-hover hover:shadow-primary transition-all duration-300",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300",
+          "border border-primary/30 bg-background/50 backdrop-blur-sm text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+          "bg-gradient-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300",
+        ghost: "hover:bg-accent/20 hover:text-accent-foreground transition-all duration-300",
         link: "text-primary underline-offset-4 hover:underline",
-        premium: "bg-gradient-gold shadow-gold hover:shadow-primary transition-all duration-300 text-primary-foreground",
-        gold: "bg-gradient-gold text-primary-foreground shadow-gold hover:shadow-primary transition-all duration-300",
+        premium: "bg-gradient-primary text-primary-foreground hover:shadow-elegant hover:scale-105 transition-all duration-300",
+        gold: "bg-gradient-gold text-foreground hover:shadow-gold hover:scale-105 transition-all duration-300",
+        hero: "bg-gradient-card border border-primary/20 text-foreground hover:border-primary/40 hover:shadow-primary backdrop-blur-sm transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

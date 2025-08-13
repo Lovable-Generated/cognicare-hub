@@ -50,7 +50,7 @@ const FeaturesGrid = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Why Choose <span className="text-primary">Dental Quick</span>?
+            Why Choose <span className="text-primary">QuickDental</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Experience the future of dental care with our comprehensive platform designed for patients, 
