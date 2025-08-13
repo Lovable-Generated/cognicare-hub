@@ -18,7 +18,7 @@ const DentalHeader = () => {
               </svg>
             </div>
             <span className="text-xl font-bold text-foreground">
-              Dental<span className="text-primary">Quick</span>
+              Rapid<span className="text-primary">Smiles</span>
             </span>
           </Link>
 

@@ -16,7 +16,7 @@ const DentalFooter = () => {
                 </svg>
               </div>
               <span className="text-xl font-bold text-foreground">
-                Dental<span className="text-primary">Quick</span>
+                Rapid<span className="text-primary">Smiles</span>
               </span>
             </Link>
             <p className="text-muted-foreground leading-relaxed">
@@ -107,7 +107,7 @@ const DentalFooter = () => {
                 <Mail className="h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <div className="font-medium text-foreground">Email</div>
-                  <div className="text-muted-foreground">support@dentalquick.com</div>
+                  <div className="text-muted-foreground">support@rapidsmiles.com</div>
                   <div className="text-sm text-muted-foreground">Response within 24h</div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const DentalFooter = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © 2024 DentalQuick. All rights reserved. | Connecting smiles worldwide.
+              © 2024 RapidSmiles. All rights reserved. | Connecting smiles worldwide.
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <Link to="/accessibility" className="text-muted-foreground hover:text-primary transition-colors">

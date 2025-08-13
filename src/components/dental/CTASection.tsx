@@ -29,7 +29,7 @@ const CTASection = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of patients and hundreds of dental professionals who trust DentalQuick 
+            Join thousands of patients and hundreds of dental professionals who trust RapidSmiles 
             for premium dental care and seamless lab communication.
           </p>
 

@@ -115,7 +115,7 @@ const Auth = () => {
         <Card className="backdrop-blur-xl bg-card/80 border-primary/20">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Welcome to DentalQuick
+              Welcome to RapidSmiles
             </CardTitle>
             <CardDescription>
               Sign in to your account or create a new one
