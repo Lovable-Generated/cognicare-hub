@@ -141,16 +141,16 @@ const Privacy = () => {
                 If you have questions or concerns about this privacy policy, please contact us:
               </p>
               <div className="text-muted-foreground ml-4 mt-2">
-                <p>Email: privacy@quickdental.com</p>
+                <p>Email: privacy@dentalquick.com</p>
                 <p>Phone: 1-800-DENTAL-1</p>
                 <p>Address: 123 Healthcare Blvd, Medical City, MC 12345</p>
-                <p>Data Protection Officer: dpo@quickdental.com</p>
+                <p>Data Protection Officer: dpo@dentalquick.com</p>
               </div>
             </section>
 
             <div className="mt-8 pt-6 border-t border-border">
               <p className="text-sm text-muted-foreground text-center">
-                © {new Date().getFullYear()} QuickDental. All rights reserved. Your privacy is our priority.
+                © {new Date().getFullYear()} DentalQuick. All rights reserved. Your privacy is our priority.
               </p>
             </div>
           </CardContent>

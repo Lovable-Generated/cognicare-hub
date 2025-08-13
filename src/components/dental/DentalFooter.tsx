@@ -10,7 +10,7 @@ const DentalFooter = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="p-2 rounded-lg bg-gradient-gold shadow-gold">
+              <div className="p-2 rounded-lg bg-gradient-primary shadow-primary">
                 <svg className="h-6 w-6 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
@@ -107,7 +107,7 @@ const DentalFooter = () => {
                 <Mail className="h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <div className="font-medium text-foreground">Email</div>
-                  <div className="text-muted-foreground">support@quickdental.com</div>
+                  <div className="text-muted-foreground">support@dentalquick.com</div>
                   <div className="text-sm text-muted-foreground">Response within 24h</div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ const DentalFooter = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-muted-foreground text-sm">
-              © 2024 QuickDental. All rights reserved. | Connecting smiles worldwide.
+              © 2024 DentalQuick. All rights reserved. | Connecting smiles worldwide.
             </div>
             <div className="flex items-center space-x-6 text-sm">
               <Link to="/accessibility" className="text-muted-foreground hover:text-primary transition-colors">

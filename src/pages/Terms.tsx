@@ -23,7 +23,7 @@ const Terms = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">1. Acceptance of Terms</h2>
               <p className="text-muted-foreground">
-                By accessing and using QuickDental services, you accept and agree to be bound by the terms and provision of this agreement. 
+                By accessing and using DentalQuick services, you accept and agree to be bound by the terms and provision of this agreement. 
                 If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
@@ -31,7 +31,7 @@ const Terms = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">2. Use of Service</h2>
               <p className="text-muted-foreground">
-                QuickDental provides a platform to connect patients with dental professionals. Our services include:
+                DentalQuick provides a platform to connect patients with dental professionals. Our services include:
               </p>
               <ul className="list-disc list-inside text-muted-foreground ml-4 space-y-1">
                 <li>Online appointment booking</li>
@@ -57,7 +57,7 @@ const Terms = () => {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">4. Medical Disclaimer</h2>
               <p className="text-muted-foreground">
-                QuickDental is a platform that facilitates connections between patients and healthcare providers. 
+                DentalQuick is a platform that facilitates connections between patients and healthcare providers. 
                 We do not provide medical advice, diagnosis, or treatment. Always consult with qualified healthcare 
                 professionals for medical concerns.
               </p>
@@ -88,14 +88,14 @@ const Terms = () => {
               <h2 className="text-xl font-semibold text-foreground mb-3">7. Payment Terms</h2>
               <p className="text-muted-foreground">
                 Payment for services is processed securely through our platform. Users agree to pay all fees 
-                associated with services booked through QuickDental. Refund policies vary by provider.
+                associated with services booked through DentalQuick. Refund policies vary by provider.
               </p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-3">8. Limitation of Liability</h2>
               <p className="text-muted-foreground">
-                QuickDental shall not be liable for any indirect, incidental, special, consequential, or punitive 
+                DentalQuick shall not be liable for any indirect, incidental, special, consequential, or punitive 
                 damages resulting from your use or inability to use the service.
               </p>
             </section>
@@ -115,7 +115,7 @@ const Terms = () => {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <div className="text-muted-foreground ml-4 mt-2">
-                <p>Email: legal@quickdental.com</p>
+                <p>Email: legal@dentalquick.com</p>
                 <p>Phone: 1-800-DENTAL-1</p>
                 <p>Address: 123 Healthcare Blvd, Medical City, MC 12345</p>
               </div>
@@ -123,7 +123,7 @@ const Terms = () => {
 
             <div className="mt-8 pt-6 border-t border-border">
               <p className="text-sm text-muted-foreground text-center">
-                © {new Date().getFullYear()} QuickDental. All rights reserved.
+                © {new Date().getFullYear()} DentalQuick. All rights reserved.
               </p>
             </div>
           </CardContent>
