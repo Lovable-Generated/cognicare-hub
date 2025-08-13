@@ -37,7 +37,8 @@ const DentalHero = () => {
               <Link to="/doctors">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-gradient-gold shadow-gold hover:shadow-primary text-lg px-8"
+                  variant="premium"
+                  className="w-full sm:w-auto text-lg px-8"
                 >
                   Find a Doctor
                 </Button>
@@ -54,7 +55,7 @@ const DentalHero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-muted-foreground">
+            <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-muted-foreground backdrop-blur-sm bg-white/5 rounded-lg p-3 inline-flex">
               <div className="flex items-center space-x-1">
                 <Star className="h-4 w-4 text-primary fill-current" />
                 <span>4.9/5 Rating</span>
@@ -73,7 +74,7 @@ const DentalHero = () => {
           {/* Right Content - Hero Image & Feature Cards */}
           <div className="relative">
             {/* Main Hero Image */}
-            <div className="mb-8 rounded-2xl overflow-hidden shadow-gold">
+            <div className="mb-8 rounded-2xl overflow-hidden shadow-primary backdrop-blur-sm border border-primary/20">
               <img 
                 src={patientConsultation} 
                 alt="Patient receiving dental consultation"

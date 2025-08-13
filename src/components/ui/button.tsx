@@ -5,22 +5,22 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-hover hover:shadow-primary transition-all duration-300",
+        default: "bg-primary/80 backdrop-blur-md text-primary-foreground hover:bg-primary hover:shadow-primary border border-primary/20 transition-all duration-300",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive/80 backdrop-blur-md text-destructive-foreground hover:bg-destructive border border-destructive/20",
         outline:
-          "border border-primary/30 bg-background/50 backdrop-blur-sm text-primary hover:bg-primary/10 hover:border-primary/50 transition-all duration-300",
+          "border border-primary/30 bg-primary/5 backdrop-blur-md text-primary hover:bg-primary/20 hover:border-primary/50 transition-all duration-300",
         secondary:
-          "bg-gradient-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300",
-        ghost: "hover:bg-accent/20 hover:text-accent-foreground transition-all duration-300",
+          "bg-secondary/60 backdrop-blur-md text-secondary-foreground hover:bg-secondary/80 border border-secondary/20 transition-all duration-300",
+        ghost: "hover:bg-accent/20 backdrop-blur-sm hover:text-accent-foreground transition-all duration-300",
         link: "text-primary underline-offset-4 hover:underline",
-        premium: "bg-gradient-primary text-primary-foreground hover:shadow-elegant hover:scale-105 transition-all duration-300",
-        gold: "bg-gradient-gold text-foreground hover:shadow-gold hover:scale-105 transition-all duration-300",
-        hero: "bg-gradient-card border border-primary/20 text-foreground hover:border-primary/40 hover:shadow-primary backdrop-blur-sm transition-all duration-300",
+        premium: "bg-gradient-primary backdrop-blur-md text-primary-foreground hover:shadow-elegant hover:scale-105 border border-white/10 transition-all duration-300",
+        glass: "bg-white/10 backdrop-blur-lg text-foreground hover:bg-white/20 border border-white/20 hover:shadow-primary transition-all duration-300",
+        hero: "bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-lg border border-primary/30 text-foreground hover:border-primary/50 hover:shadow-primary transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

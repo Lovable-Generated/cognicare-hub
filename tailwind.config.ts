@@ -104,13 +104,22 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)'
 			},
+			backdropBlur: {
+				xs: '2px',
+				sm: '4px',
+				md: '8px',
+				lg: '12px',
+				xl: '16px',
+				'2xl': '24px',
+				'3xl': '40px'
+			},
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
-				'gold': 'var(--shadow-gold)',
+				'accent': 'var(--shadow-accent)',
 				'card': 'var(--shadow-card)',
 				'elegant': 'var(--shadow-elegant)'
 			}

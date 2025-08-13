@@ -65,10 +65,10 @@ const FeaturesGrid = () => {
             return (
               <Card 
                 key={index} 
-                className="bg-card border-border hover:shadow-gold transition-all duration-300 group hover:border-primary/30"
+                className="bg-card/40 backdrop-blur-md border-primary/10 hover:shadow-primary transition-all duration-300 group hover:border-primary/30 hover:bg-card/60"
               >
                 <CardHeader className="pb-4">
-                  <div className={`inline-flex p-3 rounded-xl bg-primary/10 w-fit mb-4 group-hover:shadow-gold transition-all duration-300`}>
+                  <div className={`inline-flex p-3 rounded-xl bg-primary/10 backdrop-blur-sm w-fit mb-4 group-hover:shadow-primary transition-all duration-300`}>
                     <IconComponent className={`h-6 w-6 ${feature.color}`} />
                   </div>
                   <CardTitle className="text-xl font-semibold text-foreground">
@@ -88,7 +88,7 @@ const FeaturesGrid = () => {
         {/* Image Showcase Section */}
         <div className="mt-20 grid md:grid-cols-3 gap-8">
           <div className="relative group">
-            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-gold transition-all duration-300">
+            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-primary transition-all duration-300 backdrop-blur-sm border border-primary/10">
               <img 
                 src={dentalTeam} 
                 alt="Professional dental team"
@@ -103,7 +103,7 @@ const FeaturesGrid = () => {
           </div>
           
           <div className="relative group">
-            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-gold transition-all duration-300">
+            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-primary transition-all duration-300 backdrop-blur-sm border border-primary/10">
               <img 
                 src={dentalLabTechnology} 
                 alt="Advanced dental laboratory technology"
@@ -118,7 +118,7 @@ const FeaturesGrid = () => {
           </div>
           
           <div className="relative group">
-            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-gold transition-all duration-300">
+            <div className="overflow-hidden rounded-2xl shadow-card hover:shadow-primary transition-all duration-300 backdrop-blur-sm border border-primary/10">
               <img 
                 src={digitalBooking} 
                 alt="Digital appointment booking system"

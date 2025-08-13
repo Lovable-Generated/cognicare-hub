@@ -12,7 +12,7 @@ const DentalHeader = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="p-2 rounded-lg bg-gradient-gold shadow-gold">
+            <div className="p-2 rounded-lg bg-gradient-primary shadow-primary">
               <svg className="h-6 w-6 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
               </svg>
@@ -50,12 +50,12 @@ const DentalHeader = () => {
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/auth">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button variant="glass" className="border-primary/30">
                 Sign In
               </Button>
             </Link>
             <Link to="/auth">
-              <Button className="bg-gradient-gold shadow-gold hover:shadow-primary">
+              <Button variant="premium">
                 Get Started
               </Button>
             </Link>
@@ -100,12 +100,12 @@ const DentalHeader = () => {
               </Link>
               <div className="flex flex-col space-y-3 pt-4 border-t border-border">
                 <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <Button variant="glass" className="w-full">
                     Sign In
                   </Button>
                 </Link>
                 <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-gold shadow-gold hover:shadow-primary">
+                  <Button variant="premium" className="w-full">
                     Get Started
                   </Button>
                 </Link>
